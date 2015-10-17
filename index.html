@@ -15,10 +15,10 @@
         </header>
         <!--fin cabeza de la aplicacion-->
         <div class="content inicio">
-            <a class="btn-inicio btn btn-block btn-outlined" href="#taxi-cont">
+            <a class="btn-inicio btn btn-block btn-outlined" id="toTaxi" href="#taxi-cont">
                 <img src="taxi.png" class="img-inicio">
             </a>
-            <a class="btn-inicio btn btn-block btn-outlined" href="#bus-cont">
+            <a class="btn-inicio btn btn-block btn-outlined" id="toBus" href="#bus-cont">
                 <img src="bus.png" class="img-inicio">
             </a>
         </div>
@@ -30,7 +30,9 @@
             <h1 class="title">Taxi</h1>
           </header>
           <div class="content">
-              <p class="content-padded">The contents of my modal go here. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.</p>
+              <div id="taxi">
+
+              </div>
 
           </div>
           <!-- menu de la interfaz de los menu pie de los taxis -->
@@ -62,13 +64,17 @@
             </div>
             <!-- menu de la interfaz de los menu pie de los autobuses -->
             <div class="bar bar-tab bar-footer">
-                <a class="tab-item" href="#">
-                    <span class="icon icon-home"></span>
-                    <span class="tab-label">Home</span>
+                <a class="tab-item" href="#" id="buscaBus">
+                    <span class="icon"><img src="img/0135-search.png" alt=""></span>
+                    <span class="tab-label">rutas</span>
+                </a>
+                <a class="tab-item" href="#" id="borraMarkBus">
+                    <span class="icon"><img src="img/0270-cancel-circle.png" alt=""></span>
+                    <span class="tab-label">limpiar</span>
                 </a>
                 <a class="tab-item" href="#" id="localizacion">
-                    <span class="icon icon-home"></span>
-                    <span class="tab-label">Home</span>
+                    <span class="icon"><img src="img/0073-location2.png" alt=""></span>
+                    <span class="tab-label">localizacion</span>
                 </a>
             </div>
             <!-- fin menu de la interfaz de los menu pie de los autobuses -->
@@ -79,8 +85,7 @@
 
         <script src="js/jquery-2.1.4.js"></script>
         <script src="js/ratchet.min.js"></script>
-        <script src="http://maps.googleapis.com/maps/api/js?sensor=true"></script>
-        <script src="js/jquery.mobile-1.4.5.min.js"></script>
+        <script src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
         <script src="js/app.js"></script>
     </body>
 </html>

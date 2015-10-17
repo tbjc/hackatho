@@ -1,0 +1,28 @@
+{
+    "rutas": [
+        {
+            "longitud": 19.541243,
+            "latitud": -96.926108,
+            "imagen":"parada1.png",
+            "titulo":"Economia"
+        },
+        {
+            "longitud": 19.544512,
+            "latitud": -96.927767,
+            "imagen":"parada2.png",
+            "titulo":"av. Xalapa"
+        },
+        {
+            "longitud": 19.548951,
+            "latitud": -96.929459,
+            "imagen":"parada3.png",
+            "titulo":"Ruta Macuiltepetl"
+        },
+        {
+            "longitud": 19.551211,
+            "latitud": -96.929477,
+            "imagen":"parada4.png",
+            "titulo":"Museo Antropologia"
+        }
+    ]
+}
