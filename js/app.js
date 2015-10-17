@@ -1,25 +1,17 @@
 $( document ).ready(function() {
 var marcadores = [];
 var info = false;
-var mapaP ="";
-
-    var mapProp = {
-        center:new google.maps.LatLng(19.555452, -96.928813),
-        zoom:14,
-        mapTypeId:google.maps.MapTypeId.ROADMAP
-    };
-    var map=new google.maps.Map(document.getElementById("bus"),mapProp);
-    var map2=new google.maps.Map(document.getElementById("taxi"),mapProp);
-
-    //prueba Json
+var map;
+var map2;
 
 
-    $("#toBus").on("click",function(){
-        mapaP="bus";
-    });
-
-    $("#toTaxi").on("click",function(){
-        mapaP="Taxi";
+    $("#toTaxi").on("tap",function(){
+        var mapProp = {
+            center:new google.maps.LatLng(19.555452, -96.928813),
+            zoom:14,
+            mapTypeId:google.maps.MapTypeId.ROADMAP
+        };
+        map2=new google.maps.Map(document.getElementById("taxi"),mapProp);
          var triangleCoords = [
             {lat: 19.543484, lng: -96.935962},
             {lat: 19.551977, lng: -96.921886},
@@ -95,9 +87,18 @@ var mapaP ="";
         cargaRuta("rutas/ruta1.json");
     });
 
+    $("#toBus").on("tap",function(){
+        var mapProp = {
+            center:new google.maps.LatLng(19.555452, -96.928813),
+            zoom:14,
+            mapTypeId:google.maps.MapTypeId.ROADMAP
+        };
+        map=new google.maps.Map(document.getElementById("bus"),mapProp);
+    });
+
     function GoogleMap(position) {
         var location = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
-        var map = new google.maps.Map(document.getElementById(mapaP), {
+        var map = new google.maps.Map(document.getElementById("bus"), {
             zoom: 15,
             disableDefaultUI: true,
             mapTypeId: google.maps.MapTypeId.ROADMAP,
