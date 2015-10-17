@@ -27,3 +27,10 @@
 .imgModal{
     width: 120px;
 }
+
+@media(min-width:400px){
+    .lineal{
+        width: 48%;
+        display: inline-block;
+    }
+}
